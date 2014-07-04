@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testing Ampersand / Browserify</title>
+  <style type="text/css">
+    label {
+      display: block;
+    }
+    code {
+      padding: 2px;
+      display: inline-block;
+      background: #fafafa;
+      border: 1px solid #ddd;
+      font: consolas, courier;
+    }
+  </style>
+</head>
+<body>
+  <div id="explanation">
+    <p>You can access the app with <code>window.app</code><p>
+    <p>View can be access using <code>window.app.view</code></p>
+    <p>Model can be access using <code>window.app.model</code></p>
+    <p>Some Oddities
+      <ul>
+        <li>
+          Setting <code>window.app.model.installed=false</code> modifies
+          the DOM, but not in the way you'd expect. It just removes the
+          <code>="true"</code> part of the <code>checked="true"</code>
+          Which html still interprets as checked
+        </li>
+        <li>
+          Bindings appear to be 1-way. If you modify the <code>anything</code>
+          input and call <code>app.model.toJSON()</code>, you'll notice the
+          value hasn't changed
+        </li>
+      </ul>
+    </p>
+    <p>Questions</p>
+    <ul>
+      <li>
+        I have no idea how we'd do a nested config object with view bindings.
+        Presumably you'd actually have a nested model/form.
+      </li>
+    </ul>
+  </div>
+  <script src="./build/app.js"></script>
+</body>
+</html>

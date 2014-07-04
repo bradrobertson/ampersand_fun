@@ -1,0 +1,21 @@
+{
+  "name": "ampersand_fun",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ampersand": "^1.7.4",
+    "browserify": "^4.2.0",
+    "gulp": "^3.8.5",
+    "vinyl-source-stream": "^0.1.1"
+  },
+  "dependencies": {
+    "ampersand-model": "^3.0.4",
+    "ampersand-view": "^6.0.6"
+  }
+}
